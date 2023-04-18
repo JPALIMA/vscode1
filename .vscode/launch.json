@@ -2,7 +2,7 @@
 // https://raw.githubusercontent.com/desenvolvendo-me/linguagem_2021_ruby_ideal/release/v0.1/.vscode/launch.json
 
 {
-    "versão": "0.2.0",
+    "versão": "3.2.2",
     "configurações": [
       {
         "name": "Iniciar servidor Rails",
