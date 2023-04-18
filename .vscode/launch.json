@@ -1,0 +1,71 @@
+// 20220103094842
+// https://raw.githubusercontent.com/desenvolvendo-me/linguagem_2021_ruby_ideal/release/v0.1/.vscode/launch.json
+
+{
+    "versão": "0.2.0",
+    "configurações": [
+      {
+        "name": "Iniciar servidor Rails",
+        "tipo": "Ruby",
+        "pedido": "lançamento",
+        "cwd": "${workspaceRoot}",
+        "programa": "${workspaceRoot}/bin/rails",
+        "args": [
+          "servidor",
+          "-p",
+          "3000"
+        ]
+      },
+      {
+        "name": "Debug Rails server",
+        "tipo": "Ruby",
+        "pedido": "lançamento",
+        "cwd": "${workspaceRoot}",
+        "useBundler": true,
+        "pathToBundler": "${env:rvm_path}/gems/ruby-3.2.2/bin/bundle",
+        "programa": "${workspaceRoot}/bin/rails",
+        "args": [
+          "servidor",
+          "-p",
+          "3000"
+        ]
+      },
+      {
+        "name": "Executar RSpec - todos",
+        "tipo": "Ruby",
+        "pedido": "lançamento",
+        "cwd": "${workspaceRoot}",
+        "programa": "${env:rvm_path}/gems/ruby-3.2.2/bin/rspec",
+        "args": [
+          "--padrão",
+          "${workspaceRoot}/spec/**/*_spec.rb"
+        ]
+      },
+      {
+        "name": "Debug RSpec - arquivo de especificação aberta",
+        "tipo": "Ruby",
+        "pedido": "lançamento",
+        "cwd": "${workspaceRoot}",
+        "useBundler": true,
+        "pathToBundler": "${env:rvm_path}/gems/ruby-3.2.2/bin/bundle",
+        "debuggerPort": "1235",
+        "programa": "${env:rvm_path}/gems/ruby-3.2.2/bin/rspec",
+        "args": [
+          "${arquivo}"
+        ]
+      },
+      {
+        "name": "Debug RSpec - abrir arquivo de especificação em uma determinada linha",
+        "tipo": "Ruby",
+        "pedido": "lançamento",
+        "cwd": "${workspaceRoot}",
+        "useBundler": true,
+        "pathToBundler": "${env:rvm_path}/gems/ruby-3.2.2/bin/bundle",
+        "debuggerPort": "1235",
+        "programa": "${env:rvm_path}/gems/ruby-3.2.2/bin/rspec",
+        "args": [
+          "${file}:${lineNumber}"
+        ]
+      }
+    ]
+  }
